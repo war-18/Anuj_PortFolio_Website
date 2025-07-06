@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuj Waghulde - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* Custom animations */
+        @keyframes slideInLeft {
+            0% { opacity: 0; transform: translateX(-50px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slideInRight {
+            0% { opacity: 0; transform: translateX(50px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .slide-in-left {
+            animation: slideInLeft 1s ease-out forwards;
+        }
+        .slide-in-right {
+            animation: slideInRight 1s ease-out forwards;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        .project-card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .highlight-card {
+            border: 2px solid #f59e0b;
+            background: linear-gradient(135deg, #fef3c7, #fef9c3);
+        }
+        /* Floating image animation */
+        .animate-float {
+          animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+          0% { transform: translateY(0px); }
+          50% { transform: translateY(-12px); }
+          100% { transform: translateY(0px); }
+        }
+
+        /* Typing effect */
+        .typing-text {
+          animation: typing 4s steps(40, end) infinite, blink 0.75s step-end infinite;
+          max-width: 100%;
+        }
+
+        @keyframes typing {
+          0% { width: 0 }
+          50% { width: 100% }
+          100% { width: 0 }
+        }
+
+        @keyframes blink {
+          0%, 100% { border-color: transparent }
+          50% { border-color: white }
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+    <!-- Navbar -->
+<nav class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-4 fixed w-full top-0 z-50 shadow-lg backdrop-blur-md">
+  <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+    <a href="#home" class="text-2xl md:text-3xl font-bold transform transition-transform duration-300 hover:scale-105">Anuj Waghulde</a>
+    <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 mt-2 md:mt-0 text-sm md:text-base font-medium">
+      <a href="#home" class="hover:text-amber-300 transition duration-300">Home</a>
+      <a href="#education" class="hover:text-amber-300 transition duration-300">Education</a>
+      <a href="#experience" class="hover:text-amber-300 transition duration-300">Experience</a>
+      <a href="#projects" class="hover:text-amber-300 transition duration-300">Projects</a>
+      <a href="#skills" class="hover:text-amber-300 transition duration-300">Skills</a>
+      <a href="#awards" class="hover:text-amber-300 transition duration-300">Awards</a>
+      <a href="#certifications" class="hover:text-amber-300 transition duration-300">Certifications</a>
+      <a href="#resume" class="hover:text-amber-300 transition duration-300">Resume</a>
+      <a href="#contact" class="hover:text-amber-300 transition duration-300">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-800 via-purple-700 to-pink-600 text-white pt-28 relative overflow-hidden">
+  <div class="container mx-auto flex flex-col md:flex-row items-center px-4">
+
+    <!-- Text Area -->
+    <div class="md:w-1/2 text-center md:text-left animate__animated animate__fadeInLeft">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="text-amber-300">Anuj Waghulde</span></h1>
+      <p class="text-xl md:text-2xl mb-6 font-light typing-text border-r-2 border-white inline-block whitespace-nowrap overflow-hidden">
+        Software Developer | Automation Developer | Innovator | Learner
+      </p>
+      <div class="mt-4">
+        <a href="#contact" class="bg-amber-400 hover:bg-amber-500 text-gray-900 px-6 py-3 rounded-full font-semibold shadow-lg transition duration-300">
+          👋 Get in Touch
+        </a>
+      </div>
+    </div>
+
+    <!-- Image Area -->
+    <div class="md:w-1/2 mt-10 md:mt-0 relative animate__animated animate__fadeInRight">
+      <img src="images/Anuj_W.jpeg" alt="Anuj Waghulde" class="rounded-full mx-auto shadow-2xl border-4 border-amber-300 animate-float">
+    </div>
+  </div>
+</section>
+
+
+    <!-- Education Section -->
+<section id="education" class="py-16 bg-gray-800">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-amber-300">Education</h2>
+
+    <div class="flex flex-col gap-8 max-w-3xl mx-auto">
+
+      <!-- Bachelor's Degree -->
+      <div class="bg-gray-700 p-6 rounded-xl shadow-md border-l-4 border-blue-500 transition hover:scale-[1.02]">
+        <div class="flex items-center gap-3 mb-2">
+          <i class="fas fa-university text-blue-400 text-xl"></i>
+          <h3 class="text-xl font-semibold text-white">Bachelor of Engineering in Computer Science</h3>
+        </div>
+        <p class="text-gray-300 text-sm mb-1">📍 Pimpri Chinchwad College of Engineering and Research, Ravet, Pune (PCCOER)</p>
+        <p class="text-gray-400 text-sm mb-1">📅 2020 – 2024</p>
+        <p class="text-gray-300 text-sm">Focused on Software Development, Machine Learning, Web Technologies, and Networking.</p>
+      </div>
+
+      <!-- Higher Secondary -->
+      <div class="bg-gray-700 p-6 rounded-xl shadow-md border-l-4 border-yellow-500 transition hover:scale-[1.02]">
+        <div class="flex items-center gap-3 mb-2">
+          <i class="fas fa-school text-yellow-400 text-xl"></i>
+          <h3 class="text-xl font-semibold text-white">Higher Secondary Education</h3>
+        </div>
+        <p class="text-gray-300 text-sm mb-1">📍 Swami Vivekanand Jr. College, Moolji Jetha College, Jalgaon</p>
+        <p class="text-gray-400 text-sm mb-1">📅 2018 – 2020</p>
+        <p class="text-gray-300 text-sm">Stream: Science with Computer Electronics.</p>
+      </div>
+
+      <!-- Secondary -->
+      <div class="bg-gray-700 p-6 rounded-xl shadow-md border-l-4 border-green-500 transition hover:scale-[1.02]">
+        <div class="flex items-center gap-3 mb-2">
+          <i class="fas fa-graduation-cap text-green-400 text-xl"></i>
+          <h3 class="text-xl font-semibold text-white">Central Board of Secondary Education</h3>
+        </div>
+        <p class="text-gray-300 text-sm mb-1">📍 Rustomjie International School, Jalgaon</p>
+        <p class="text-gray-400 text-sm mb-1">📅 2018</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Experience Section -->
+<section id="experience" class="py-16 bg-gray-900">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-amber-300">Experience</h2>
+
+    <div class="relative border-l-4 border-amber-500 ml-4 space-y-12">
+
+      <!-- Current Role Highlighted -->
+      <div class="relative pl-8 group">
+        <div class="absolute w-4 h-4 bg-amber-400 rounded-full -left-2 top-2 animate-pulse border-2 border-white"></div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-xl ring-2 ring-amber-400">
+          <h3 class="text-xl font-semibold text-white">Engineer - I, SVT/QA/QC Automation Engineer</h3>
+          <p class="text-gray-300">Semtech Advanced Systems | <strong class="text-green-400">July 2024 – Present</strong></p>
+          <ul class="list-disc ml-6 mt-2 text-gray-200 space-y-1">
+            <li>Designed and maintained automation test scripts using Python and Selenium for cloud-integrated networking devices.</li>
+            <li>Performed functional and performance testing of routers (XR90, XR80, RV55, MP70, LX60).</li>
+            <li>Conducted REST API testing and managed bugs via JIRA with CI/CD integration using Jenkins and GitLab CI.</li>
+            <li>Automated tests for GPS, ALMS, SNF, Firmware Upgrade/Downgrade, Event Reporting, Telnet/SSH, and Admin interfaces.</li>
+            <li>Validated devices running AOS and ALEOS using cloud platforms like ALMS and AMM.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Internship at Semtech -->
+      <div class="relative pl-8 group">
+        <div class="absolute w-4 h-4 bg-gray-500 rounded-full -left-2 top-2 border-2 border-white"></div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold text-white">SQA/Solutions Intern</h3>
+          <p class="text-gray-300">Semtech Advanced Systems | July 2023 – June 2024</p>
+          <ul class="list-disc ml-6 mt-2 text-gray-200 space-y-1">
+            <li>Created automation scripts for ALMS platform and developed dashboards for test result visualization.</li>
+            <li>Performed manual and automated validation for connectivity, performance, and stability of routers.</li>
+            <li>Assisted in API testing and documented detailed info on AirLink routers and platforms.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Vspace Internship -->
+      <div class="relative pl-8 group">
+        <div class="absolute w-4 h-4 bg-gray-500 rounded-full -left-2 top-2 border-2 border-white"></div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold text-white">Software Developer Intern</h3>
+          <p class="text-gray-300">Vspace Software Pvt. Limited | April 2023 – May 2023</p>
+          <ul class="list-disc ml-6 mt-2 text-gray-200 space-y-1">
+            <li>Developed ML models for dental image classification and disease prediction.</li>
+            <li>Built automation to classify tooth types and diagnose conditions like cavities.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- GDSC -->
+      <div class="relative pl-8 group">
+        <div class="absolute w-4 h-4 bg-gray-500 rounded-full -left-2 top-2 border-2 border-white"></div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold text-white">Member, Google Developer Student Club</h3>
+          <p class="text-gray-300">Active Member</p>
+          <ul class="list-disc ml-6 mt-2 text-gray-200 space-y-1">
+            <li>Attended workshops, hackathons, and community-driven coding sessions.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Geeks for Geeks -->
+      <div class="relative pl-8 group">
+        <div class="absolute w-4 h-4 bg-gray-500 rounded-full -left-2 top-2 border-2 border-white"></div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold text-white">Member, Geeks for Geeks Student Club</h3>
+          <p class="text-gray-300">Active Member</p>
+          <ul class="list-disc ml-6 mt-2 text-gray-200 space-y-1">
+            <li>Participated in technical discussions and organized coding events.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- TECHNOVATE -->
+      <div class="relative pl-8 group">
+        <div class="absolute w-4 h-4 bg-gray-500 rounded-full -left-2 top-2 border-2 border-white"></div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold text-white">Technical Lead, TECHNOVATE Event</h3>
+          <p class="text-gray-300">PCCOER</p>
+          <ul class="list-disc ml-6 mt-2 text-gray-200 space-y-1">
+            <li>Led the development and execution of PCCOER’s flagship TECHNOVATE 2023 event.</li>
+            <li>Managed technical team and delivered backend and website for event operations.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- Projects Section -->
+<section id="projects" class="py-16 bg-gradient-to-b from-gray-800 to-gray-900">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-amber-300">Projects</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Project Card Template -->
+      <div class="group bg-gray-700 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-[1.03]">
+        <img src="images/technovate.png" alt="Technovate" class="w-full h-40 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-semibold text-white">TECHNOVATE 2023</h3>
+          <p class="text-sm text-amber-300">React JS | PCCOER Event Website</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- Designed and developed a responsive website showcasing event details, registrations, and updates to boost student engagement.</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- Designed and developed a modern, responsive website for TECHNOVATE 2k23, a flagship technical event at PCCOER.</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- The site showcased event details, registration options, schedules, and updates, aiming to boost student engagement and participation.</p>
+        </div>
+      </div>
+
+      <div class="group bg-gray-700 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-[1.03]">
+        <img src="images/movie_review.jpeg" alt="Cineflix" class="w-full h-40 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-semibold text-white">Cineflix – Movie Platform</h3>
+          <p class="text-sm text-amber-300">React JS, Node JS, MongoDB, Firebase</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- Built a full-stack app for movie reviews, comments, and trailers with secure auth and real-time features.</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- Built a full-stack web application where users can explore movies, post reviews, comment, and stream trailers.</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- Implemented secure user authentication, integrated Firebase for real-time updates, and used MongoDB for data persistence.</p>
+        </div>
+      </div>
+
+      <div class="group bg-gray-700 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-[1.03]">
+        <img src="images/dental_tooth_disease.jpeg" alt="Dental Disease Prediction" class="w-full h-40 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-semibold text-white">Dental Disease Prediction</h3>
+          <p class="text-sm text-amber-300">Python, Machine Learning</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- Trained ML models to detect tooth diseases based on structure and classification of dental patterns.</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- Created a machine learning pipeline to classify different tooth types (e.g., bifurcated, long, narrow) based on shape and structure data.</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- Trained the model to detect and predict potential dental diseases, enabling data-driven dental diagnosis and support tools for healthcare professionals.</p>
+        </div>
+      </div>
+
+      <div class="group bg-gray-700 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-[1.03]">
+        <img src="images/mental_health.jpeg" alt="Mindmate" class="w-full h-40 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-semibold text-white">Mindmate</h3>
+          <p class="text-sm text-amber-300">Python, Flask, OpenCV, REST APIs</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- Built an assistant for emotional detection, therapy suggestions, and mental health insights using ML + vision.</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- Developed a mental health assistant that predicts emotional and psychological health using textual input and facial expression analysis.</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- Included features like a depression calculator, suicide risk detection, therapy recommendations, motivational content, chatbot integration, and map-based therapist location finder.</p>
+        </div>
+      </div>
+
+      <div class="group bg-gray-700 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-[1.03]">
+        <img src="images/health_care.png" alt="HealthCare App" class="w-full h-40 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-semibold text-white">HealthCare App</h3>
+          <p class="text-sm text-amber-300">Flutter, Dart</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- Cross-platform mobile app with chatbot, doctor finder, and exercise guides for chronic condition support.</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- Built a cross-platform mobile app to assist users with long-term health conditions.</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- Features included a healthcare chatbot, personalized exercise suggestions, nearby doctor search, health tips, and BMI calculator, all within a clean and accessible interface.</p>
+        </div>
+      </div>
+
+      <div class="group bg-gray-700 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-[1.03]">
+        <img src="images/face_lock.jpg" alt="Face Lock" class="w-full h-40 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-semibold text-white">Automated Face Lock</h3>
+          <p class="text-sm text-amber-300">Python, OpenCV, Arduino</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- Real-time facial recognition integrated with Arduino for secure physical access control.</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- Developed a real-time facial recognition-based locking mechanism integrated with Arduino hardware.</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- Enabled secure access using biometric facial data, improving physical security through automation and computer vision.</p>
+        </div>
+      </div>
+
+      <div class="group bg-gray-700 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-[1.03]">
+        <img src="images/acme_sujan_chemical.jpg" alt="Chemical Website" class="w-full h-40 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-semibold text-white">Chemical Company Website</h3>
+          <p class="text-sm text-amber-300">HTML, CSS, JS, MySQL</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- Corporate site for showcasing products and managing inventory with MySQL backend.</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- Created a corporate website for a chemical company to manage and display product offerings.</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- Integrated backend database for managing inventory, product listings, and customer inquiries efficiently.</p>
+        </div>
+      </div>
+
+      <div class="group bg-gray-700 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-[1.03]">
+        <img src="images/bloodbank.png" alt="Blood Bank" class="w-full h-40 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-semibold text-white">Blood Bank Management System</h3>
+          <p class="text-sm text-amber-300">Python, Django, SQLite</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- System to manage blood donors, recipients, stock, and notifications in real-time.</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- Developed a web application to manage end-to-end blood bank operations.</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- Functionality included donor/recipient registration, blood requests, admin approval flow, real-time stock management, and notification system.</p>
+        </div>
+      </div>
+
+      <div class="group bg-gray-700 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-[1.03]">
+        <img src="images/dashboard.jpg" alt="Dashboards" class="w-full h-40 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-semibold text-white">Interactive QA Dashboards</h3>
+          <p class="text-sm text-amber-300">Python, Flask, Plotly, MySQL</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- Visualized test metrics (pass/fail/time/feature) to optimize automation for Semtech routers.</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- Built an analytics dashboard to visualize automated test results for embedded networking devices.</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- Showcased test case metrics like pass/fail/error counts, time duration, and feature-based sorting.</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- Helped identify critical failures and optimize test cycles for QA teams along with CI/CD teams.</p>
+        </div>
+      </div>
+
+      <div class="group bg-gray-700 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-[1.03]">
+        <img src="images/voice_routers.jpeg" alt="Voice Router" class="w-full h-40 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-semibold text-white">Voice-Controlled Router Management</h3>
+          <p class="text-sm text-amber-300">Python, Flask, REST API, Speech Recognition</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- Used voice commands to perform real-time router operations (firmware upgrade, sync, status).</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- Developed a smart voice assistant system to perform router operations such as firmware install, synchronization, status check, and basic settings configuration using voice commands.</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- Utilized speech-to-text processing and REST API calls to communicate with cloud platforms like ALMS and control router behavior in real time.</p>
+          <p class="text-gray-400 text-sm mt-2 group-hover:opacity-100 transition-opacity duration-300 opacity-0 h-0 group-hover:h-auto">- Designed for enhanced accessibility and next-gen automation for networking devices.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Skills Section -->
+<section id="skills" class="py-16 bg-gray-800">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-amber-300">Skills</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+
+      <!-- Programming Languages -->
+      <div class="bg-gray-700 p-6 rounded-xl shadow-md border-l-4 border-blue-400 transition hover:scale-[1.02]">
+        <h3 class="text-xl font-semibold text-white mb-3">Programming Languages</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-gray-600 text-white text-sm font-medium px-3 py-1 rounded-full transition duration-300 hover:bg-amber-500">Python</span>
+          <span class="bg-gray-600 text-white text-sm font-medium px-3 py-1 rounded-full transition duration-300 hover:bg-amber-500">Java</span>
+          <span class="bg-gray-600 text-white text-sm font-medium px-3 py-1 rounded-full transition duration-300 hover:bg-amber-500">C/C++</span>
+          <span class="bg-gray-600 text-white text-sm font-medium px-3 py-1 rounded-full transition duration-300 hover:bg-amber-500">JavaScript</span>
+          <span class="bg-gray-600 text-white text-sm font-medium px-3 py-1 rounded-full transition duration-300 hover:bg-amber-500">PHP</span>
+        </div>
+      </div>
+
+      <!-- Data Structures & Algorithms -->
+      <div class="bg-gray-700 p-6 rounded-xl shadow-md border-l-4 border-yellow-400 transition hover:scale-[1.02]">
+        <h3 class="text-xl font-semibold text-white mb-3">Data Structures & Algorithms</h3>
+        <p class="text-gray-300 text-sm">Proficient in problem-solving, algorithms, and competitive programming techniques.</p>
+      </div>
+
+      <!-- Databases -->
+      <div class="bg-gray-700 p-6 rounded-xl shadow-md border-l-4 border-green-400 transition hover:scale-[1.02]">
+        <h3 class="text-xl font-semibold text-white mb-3">Databases</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-gray-600 text-white text-sm font-medium px-3 py-1 rounded-full transition duration-300 hover:bg-amber-500">MySQL</span>
+          <span class="bg-gray-600 text-white text-sm font-medium px-3 py-1 rounded-full transition duration-300 hover:bg-amber-500">MongoDB</span>
+          <span class="bg-gray-600 text-white text-sm font-medium px-3 py-1 rounded-full transition duration-300 hover:bg-amber-500">Firebase</span>
+        </div>
+      </div>
+
+      <!-- DevOps & Automation -->
+      <div class="bg-gray-700 p-6 rounded-xl shadow-md border-l-4 border-red-400 transition hover:scale-[1.02]">
+        <h3 class="text-xl font-semibold text-white mb-3">DevOps & Automation</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-gray-600 text-white text-sm font-medium px-3 py-1 rounded-full transition duration-300 hover:bg-amber-500">Git & GitHub Actions</span>
+          <span class="bg-gray-600 text-white text-sm font-medium px-3 py-1 rounded-full transition duration-300 hover:bg-amber-500">Selenium</span>
+          <span class="bg-gray-600 text-white text-sm font-medium px-3 py-1 rounded-full transition duration-300 hover:bg-amber-500">REST APIs</span>
+          <span class="bg-gray-600 text-white text-sm font-medium px-3 py-1 rounded-full transition duration-300 hover:bg-amber-500">Automation</span>
+        </div>
+      </div>
+
+      <!-- Technologies -->
+      <div class="bg-gray-700 p-6 rounded-xl shadow-md border-l-4 border-purple-400 transition hover:scale-[1.02]">
+        <h3 class="text-xl font-semibold text-white mb-3">Technologies</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-gray-600 text-white text-sm font-medium px-3 py-1 rounded-full transition duration-300 hover:bg-amber-500">Computer Networking</span>
+          <span class="bg-gray-600 text-white text-sm font-medium px-3 py-1 rounded-full transition duration-300 hover:bg-amber-500">HTML5</span>
+          <span class="bg-gray-600 text-white text-sm font-medium px-3 py-1 rounded-full transition duration-300 hover:bg-amber-500">CSS3</span>
+          <span class="bg-gray-600 text-white text-sm font-medium px-3 py-1 rounded-full transition duration-300 hover:bg-amber-500">JavaScript</span>
+          <span class="bg-gray-600 text-white text-sm font-medium px-3 py-1 rounded-full transition duration-300 hover:bg-amber-500">Flask</span>
+          <span class="bg-gray-600 text-white text-sm font-medium px-3 py-1 rounded-full transition duration-300 hover:bg-amber-500">Django</span>
+          <span class="bg-gray-600 text-white text-sm font-medium px-3 py-1 rounded-full transition duration-300 hover:bg-amber-500">React JS</span>
+          <span class="bg-gray-600 text-white text-sm font-medium px-3 py-1 rounded-full transition duration-300 hover:bg-amber-500">Express JS</span>
+          <span class="bg-gray-600 text-white text-sm font-medium px-3 py-1 rounded-full transition duration-300 hover:bg-amber-500">Node JS</span>
+          <span class="bg-gray-600 text-white text-sm font-medium px-3 py-1 rounded-full transition duration-300 hover:bg-amber-500">Machine Learning</span>
+          <span class="bg-gray-600 text-white text-sm font-medium px-3 py-1 rounded-full transition duration-300 hover:bg-amber-500">Data Science</span>
+          <span class="bg-gray-600 text-white text-sm font-medium px-3 py-1 rounded-full transition duration-300 hover:bg-amber-500">Data Analytics</span>
+        </div>
+      </div>
+
+      <!-- Operating Systems -->
+      <div class="bg-gray-700 p-6 rounded-xl shadow-md border-l-4 border-teal-400 transition hover:scale-[1.02]">
+        <h3 class="text-xl font-semibold text-white mb-3">Operating Systems</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-gray-600 text-white text-sm font-medium px-3 py-1 rounded-full transition duration-300 hover:bg-amber-500">Linux</span>
+          <span class="bg-gray-600 text-white text-sm font-medium px-3 py-1 rounded-full transition duration-300 hover:bg-amber-500">Windows</span>
+        </div>
+      </div>
+
+      <!-- Other Skills -->
+      <div class="bg-gray-700 p-6 rounded-xl shadow-md border-l-4 border-indigo-400 transition hover:scale-[1.02]">
+        <h3 class="text-xl font-semibold text-white mb-3">Other Skills</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-gray-600 text-white text-sm font-medium px-3 py-1 rounded-full transition duration-300 hover:bg-amber-500">Problem Solving</span>
+          <span class="bg-gray-600 text-white text-sm font-medium px-3 py-1 rounded-full transition duration-300 hover:bg-amber-500">Teamwork</span>
+          <span class="bg-gray-600 text-white text-sm font-medium px-3 py-1 rounded-full transition duration-300 hover:bg-amber-500">Volunteering</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- Resume Section -->
+<section id="resume" class="py-16 bg-gradient-to-b from-gray-900 to-gray-800">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-amber-300">Resume</h2>
+
+    <div class="bg-gray-700 p-8 rounded-xl shadow-lg max-w-5xl mx-auto">
+      <div class="mb-6">
+        <h3 class="text-2xl font-semibold text-white mb-2">Anuj Waghulde</h3>
+        <p class="text-gray-300 text-sm">📍 Pune, Maharashtra, India | 📧 anujrw18@gmail.com | 📞 +91 9146237138</p>
+        <p class="text-sm mt-1">
+          <a href="https://www.linkedin.com/in/anuj-waghulde-37ab49224/" target="_blank" class="text-amber-400 hover:underline mr-4">LinkedIn</a>
+          <a href="https://github.com/war-18" target="_blank" class="text-amber-400 hover:underline">GitHub</a>
+        </p>
+      </div>
+
+      <div class="space-y-8 text-gray-200 text-sm">
+
+        <!-- Profile -->
+        <div>
+          <h4 class="text-lg font-semibold text-amber-300 mb-1">Profile</h4>
+          <p>"Highly motivated and detail-oriented software professional with strong skills in C++, Python, networking, and REST APIs. Adept at developing and testing scalable, reliable software solutions and automating workflows. Passionate about innovation and cross-functional collaboration."</p>
+        </div>
+
+        <!-- Education -->
+        <div>
+          <h4 class="text-lg font-semibold text-amber-300 mb-1">Education</h4>
+          <ul class="list-disc ml-5">
+            <li><strong>B.E. Computer Engineering (Data Science Hons)</strong> – PCCOER, Pune | CGPA: 9.11 | 2020–2024</li>
+            <li><strong>HSC (Science)</strong> – Moolji Jetha College, Jalgaon | 85.23% | 2018–2020</li>
+            <li><strong>CBSE (10th)</strong> – Rustomjie Intl. School, Jalgaon | 86% | 2018</li>
+          </ul>
+        </div>
+
+        <!-- Skills -->
+        <div>
+          <h4 class="text-lg font-semibold text-amber-300 mb-1">Skills</h4>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 list-disc ml-5">
+            <li><strong>Languages:</strong> Python, Java, C/C++, JavaScript, PHP</li>
+            <li><strong>Databases:</strong> MySQL, MongoDB, Firebase</li>
+            <li><strong>DevOps:</strong> GitHub Actions, Selenium, REST APIs, Automation</li>
+            <li><strong>Technologies:</strong> HTML5, CSS3, Flask, Django, React, Node.js, ML, Data Science</li>
+            <li><strong>OS:</strong> Linux, Windows</li>
+            <li><strong>Other:</strong> Problem Solving, Teamwork, Volunteering</li>
+          </ul>
+        </div>
+
+        <!-- Experience -->
+        <div>
+          <h4 class="text-lg font-semibold text-amber-300 mb-1">Experience</h4>
+          <p class="text-white font-semibold mt-2">Engineer - I (QA/Automation), Semtech Advanced Systems | July 2024 – Present</p>
+          <ul class="list-disc ml-5">
+            <li>Designed and maintained Python+Selenium automation for networking devices.</li>
+            <li>Performed full-stack testing (manual + automated) on AOS/ALEOS routers with ALMS/AMM.</li>
+            <li>REST API testing, JIRA test case management, CI/CD with Jenkins & GitLab CI.</li>
+            <li>Worked on XR90, XR80, RV55, MP70, LX60 routers used in public safety and smart cities.</li>
+          </ul>
+
+          <p class="text-white font-semibold mt-4">SQA/Solutions Intern, Semtech | July 2023 – June 2024</p>
+          <ul class="list-disc ml-5">
+            <li>Built dashboards, ran cloud tests, developed config automation using ALMS.</li>
+            <li>Tested router stability, feature validation, and REST API scenarios.</li>
+          </ul>
+
+          <p class="text-white font-semibold mt-4">Software Developer Intern, Vspace Software | Apr 2023 – May 2023</p>
+          <ul class="list-disc ml-5">
+            <li>ML model for dental diagnostics: tooth type classification and disease detection.</li>
+          </ul>
+        </div>
+
+        <!-- Projects -->
+        <div>
+          <h4 class="text-lg font-semibold text-amber-300 mb-1">Projects</h4>
+          <ul class="list-disc ml-5 text-gray-200 space-y-1">
+            <li><strong>TECHNOVATE Website:</strong> React-based site for PCCOER’s technical fest with registration and schedule modules.</li>
+            <li><strong>Cineflix:</strong> Full-stack movie platform with reviews, comments, trailers, and Firebase authentication.</li>
+            <li><strong>Dental Disease Prediction:</strong> ML model to classify tooth types and predict dental issues.</li>
+            <li><strong>Mindmate:</strong> Mental health prediction using text and facial emotion analysis with smart recommendations.</li>
+            <li><strong>Health Care App:</strong> Flutter app with chatbot, BMI calculator, doctor locator, and exercise suggestions.</li>
+            <li><strong>Face Lock System:</strong> Real-time facial recognition lock integrated with Arduino for physical security.</li>
+            <li><strong>Chemical Company Website:</strong> Product management website with inventory control and customer inquiry form.</li>
+            <li><strong>Blood Bank System:</strong> Django web app for managing donations, requests, and stock with admin dashboard.</li>
+            <li><strong>QA Test Dashboards:</strong> Flask-based dashboards showing pass/fail/error metrics from automated testing.</li>
+            <li><strong>Voice-Controlled Router:</strong> Voice assistant to control routers via REST APIs and ALMS integration.</li>
+          </ul>
+        </div>
+
+
+        <!-- Awards -->
+        <div>
+          <h4 class="text-lg font-semibold text-amber-300 mb-1">Achievements</h4>
+          <ul class="list-disc ml-5">
+            <li>Patent Grant : “Language Learning Robotics Assistant- Application having Second Position, Application No: 415490-001, Cbr No: 207307, Cbr Date: 01/05/2024.</li>
+            <li>Copyright Grant : MINDSCAPE : Sucidal Contagion, Transforming Mental Well-being Through Advanced Machine Learning and Compassionate Support, Diary No: 30659/2023-CO/L, Date : 30/01/2024.</li>
+            <li>Research Paper on Android based HealthCare Application at IJIES/ICRASET.</li>
+            <li>Research Paper on Mental Health Detection and Smart Recommendation System  at IJIRCCE.</li>
+            <li>ICPC Regionalist 2023-24, Two Regionals Kanpur, Amritapuri (International Level Programming Contest).</li>
+            <li>Ranked 5th in MaTPO Programming idol (Maharashtra Level).</li>
+            <li>Winner at TIAA Hackathon.</li>
+            <li>4 Star coder at Codechef (Highest Rating 1766).</li>
+            <li>Pupil coder at Codeforces (Highest Rating 1315).</li>
+            <li>Knight at Leetcode (Highest Rating 1959, Top 3%).</li>
+            <li>Meta Hacker Cup, Cleared Round 1.</li>
+            <li>Gate Exam 2024 Qualified.</li>
+            <li>Secured 1st rank in Code-Marshal 4.0 Event, 2nd rank in Hacker Halloween Event, 2nd rank in Decypher Event (Inter-college coding event) at MMCOE.</li>
+            <li>Secured 1st rank in C-Cube club event (fast coding event), 2nd Rank in The BroCode Event, 3rd Rank in Code Combat Event (Inter-college coding event) at PCCOER.</li>
+          </ul>
+        </div>
+
+        <!-- Certifications -->
+        <div>
+          <h4 class="text-lg font-semibold text-amber-300 mb-1">Certifications</h4>
+          <ul class="list-disc ml-5">
+            <li>Machine Learning A-Z</li>
+            <li>Core Java Programming</li>
+            <li>Crash Course on Python</li>
+            <li>Python & OS Interface</li>
+            <li>Web Development Bootcamp</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Download Button -->
+      <div class="text-center mt-8">
+        <a href="resume/Anuj_Waghulde_Resume.pdf" download class="bg-amber-400 hover:bg-amber-500 text-gray-900 px-6 py-3 rounded-full font-semibold transition duration-300">
+          📥 Download Resume (PDF)
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Awards Section -->
+<section id="awards" class="py-16 bg-gray-900">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-amber-300">Awards and Achievements</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-5xl mx-auto">
+      
+      <!-- Patent -->
+      <div class="bg-gray-800 p-4 rounded-lg shadow-md border-l-4 border-yellow-400 transition-all duration-300 hover:scale-[1.02] hover:border-amber-500">
+        <h3 class="text-lg font-semibold text-white">Patent Grant</h3>
+        <p class="text-gray-300 text-sm mt-1">“Language Learning Robotics Assistant”<br>
+        Application No: <strong>415490-001</strong>, CBR No: 207307<br>
+        Date: <strong>01/05/2024</strong></p>
+      </div>
+
+      <!-- Copyright -->
+      <div class="bg-gray-800 p-4 rounded-lg shadow-md border-l-4 border-green-400 transition-all duration-300 hover:scale-[1.02] hover:border-green-500">
+        <h3 class="text-lg font-semibold text-white">Copyright Grant</h3>
+        <p class="text-gray-300 text-sm mt-1">MINDSCAPE: Suicidal Contagion<br>
+        Diary No: <strong>30659/2023-CO/L</strong><br>
+        Date: <strong>30/01/2024</strong></p>
+      </div>
+
+      <!-- Research Papers -->
+      <div class="bg-gray-800 p-4 rounded-lg shadow-md border-l-4 border-blue-400 transition-all duration-300 hover:scale-[1.02] hover:border-blue-500">
+        <h3 class="text-lg font-semibold text-white">Research Publications</h3>
+        <ul class="list-disc ml-5 mt-2 text-gray-300 text-sm space-y-1">
+          <li>Android-based HealthCare Application @ IJIES/ICRASET</li>
+          <li>Mental Health Detection & Smart Recommendation @ IJIRCCE</li>
+        </ul>
+      </div>
+
+      <!-- Competitive Programming -->
+      <div class="bg-gray-800 p-4 rounded-lg shadow-md border-l-4 border-purple-400 transition-all duration-300 hover:scale-[1.02] hover:border-purple-500">
+        <h3 class="text-lg font-semibold text-white">Competitive Programming</h3>
+        <ul class="list-disc ml-5 mt-2 text-gray-300 text-sm space-y-1">
+          <li>ICPC Regionalist (2023-24) – Kanpur, Amritapuri</li>
+          <li>5th Rank - MaTPO Programming Idol (State Level)</li>
+          <li>Meta Hacker Cup – Cleared Round 1</li>
+          <li>GATE 2024 – Qualified</li>
+        </ul>
+      </div>
+
+      <!-- Coding Platforms -->
+      <div class="bg-gray-800 p-4 rounded-lg shadow-md border-l-4 border-pink-400 transition-all duration-300 hover:scale-[1.02] hover:border-pink-500">
+        <h3 class="text-lg font-semibold text-white">Coding Profiles</h3>
+        <ul class="list-disc ml-5 mt-2 text-gray-300 text-sm space-y-1">
+          <li>4★ CodeChef – Highest: 1766</li>
+          <li>Pupil @ Codeforces – Highest: 1315</li>
+          <li>Knight @ LeetCode – Highest: 1959 (Top 3%)</li>
+        </ul>
+      </div>
+
+      <!-- Event Wins -->
+      <div class="bg-gray-800 p-4 rounded-lg shadow-md border-l-4 border-indigo-400 transition-all duration-300 hover:scale-[1.02] hover:border-indigo-500">
+        <h3 class="text-lg font-semibold text-white">Hackathons & Coding Events</h3>
+        <ul class="list-disc ml-5 mt-2 text-gray-300 text-sm space-y-1">
+          <li>Winner – TIAA Hackathon</li>
+          <li>1st – Code-Marshal 4.0 (MMCOE)</li>
+          <li>2nd – Hacker Halloween, Decypher (MMCOE)</li>
+          <li>1st – C-Cube Club Event (PCCOER)</li>
+          <li>2nd – The BroCode Event (PCCOER)</li>
+          <li>3rd – Code Combat (PCCOER)</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- Certifications Section -->
+<section id="certifications" class="py-16 bg-gray-800">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-amber-300">Certifications</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <!-- Each Certification Card -->
+      <div class="bg-gray-700 p-4 rounded-lg shadow-md border-l-4 border-blue-400 transition-all duration-300 hover:scale-[1.03] hover:border-blue-500">
+        <h3 class="text-lg font-semibold text-white">Machine Learning A-Z</h3>
+        <p class="text-gray-300 text-sm mt-1">Hands-on ML techniques & projects using Python, TensorFlow, and R.</p>
+      </div>
+
+      <div class="bg-gray-700 p-4 rounded-lg shadow-md border-l-4 border-green-400 transition-all duration-300 hover:scale-[1.03] hover:border-green-500">
+        <h3 class="text-lg font-semibold text-white">Core Java Programming</h3>
+        <p class="text-gray-300 text-sm mt-1">Mastered OOP concepts, exception handling, multithreading, and JDBC.</p>
+      </div>
+
+      <div class="bg-gray-700 p-4 rounded-lg shadow-md border-l-4 border-purple-400 transition-all duration-300 hover:scale-[1.03] hover:border-purple-500">
+        <h3 class="text-lg font-semibold text-white">Python Interface with OS</h3>
+        <p class="text-gray-300 text-sm mt-1">Worked with OS modules, subprocess, automation, and scripting utilities.</p>
+      </div>
+
+      <div class="bg-gray-700 p-4 rounded-lg shadow-md border-l-4 border-pink-400 transition-all duration-300 hover:scale-[1.03] hover:border-pink-500">
+        <h3 class="text-lg font-semibold text-white">Python Coding on Python</h3>
+        <p class="text-gray-300 text-sm mt-1">Focused on advanced Python patterns, decorators, and performance tuning.</p>
+      </div>
+
+      <div class="bg-gray-700 p-4 rounded-lg shadow-md border-l-4 border-yellow-400 transition-all duration-300 hover:scale-[1.03] hover:border-yellow-500">
+        <h3 class="text-lg font-semibold text-white">Complete Web Development Bootcamp</h3>
+        <p class="text-gray-300 text-sm mt-1">Built full-stack apps using HTML, CSS, JS, Node.js, Express, and MongoDB.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-gradient-to-r from-indigo-600 to-purple-700 text-white">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-amber-300">Let's Connect</h2>
+    <p class="text-lg mb-8 max-w-2xl mx-auto text-gray-100">
+      Open to collaborations, freelance projects, internships, or just tech talk. Let’s build something great together!
+    </p>
+
+    <!-- Contact Info -->
+    <div class="flex flex-col md:flex-row justify-center items-center gap-8 text-left text-white mb-10">
+      <div class="flex items-center space-x-4">
+        <i class="fas fa-envelope text-2xl text-amber-300"></i>
+        <p><span class="font-semibold">Email:</span> <a href="mailto:anujrw18@gmail.com" class="hover:text-amber-300">anujrw18@gmail.com</a></p>
+      </div>
+      <div class="flex items-center space-x-4">
+        <i class="fas fa-phone text-2xl text-amber-300"></i>
+        <p><span class="font-semibold">Phone:</span> <a href="tel:+919146237138" class="hover:text-amber-300">+91-9146237138</a></p>
+      </div>
+    </div>
+
+    <!-- Social Links -->
+    <div class="flex justify-center space-x-6 text-2xl">
+      <a href="https://www.linkedin.com/in/anuj-waghulde-37ab49224/" target="_blank" class="hover:text-amber-300 transition duration-300" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://www.github.com/war-18" target="_blank" class="hover:text-amber-300 transition duration-300" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="mailto:anujrw18@gmail.com" class="hover:text-amber-300 transition duration-300" title="Email">
+        <i class="fas fa-paper-plane"></i>
+      </a>
+    </div>
+
+    <!-- Resume Button (Optional) -->
+    <div class="mt-10">
+      <a href="resume/Anuj_Waghulde_Resume.pdf" download class="inline-block bg-amber-400 hover:bg-amber-500 text-gray-900 px-6 py-3 rounded-full font-semibold transition duration-300 shadow-lg">
+        📥 Download Resume
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center py-4">
+        <p>© 2025 Anuj Waghulde. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Scroll Animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add(entry.target.classList.contains('slide-in-left') ? 'slide-in-left' : entry.target.classList.contains('slide-in-right') ? 'slide-in-right' : 'fade-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            elements.forEach(element => observer.observe(element));
+        });
+    </script>
+</body>
+</html>
